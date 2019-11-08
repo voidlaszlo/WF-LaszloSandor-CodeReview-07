@@ -153,6 +153,33 @@ table {
     }
 }
 
+// BLOGPOSTS
+div.blog-posts {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1em;
+    margin-top: -1em;
+
+    div.blog-post {
+        border: 1px solid black;
+        padding: 0.5em;
+
+        p {
+            padding-left: 1em;
+            margin: 1em 0;
+            border-left: 1px solid black;
+        }
+
+        small {
+            display: block;
+            text-align: right;
+            color: black;
+            font-weight: 700;
+        }
+    }
+}
+
+// FOOTER
 footer {
     text-align: center;
     padding: 2em 0;
