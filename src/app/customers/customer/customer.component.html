@@ -1,0 +1,17 @@
+<h1 id="form-text">Customer Subscribe</h1>
+<form #form="ngForm" autocomplete="off" (submit)="onSubmit(form)">
+    <input type="hidden" name="id" #id="ngModel" [(ngModel)]="service.formData.id">
+    <div class="form-input">
+        <input name="fullName" #fullName="ngModel" [(ngModel)]="service.formData.fullName" placeholder="Full name" required>
+        <div *ngIf="fullName.invalid && fullName.touched" class="validiation-error">This field is required</div>
+    </div>
+    <div class="form-group">
+        <div class="form-input">
+            <input name="fromPlace" #fromPlace="ngModel" [(ngModel)]="service.formData.fromPlace" placeholder="From">
+        </div>
+        <div class="form-input">
+            <input name="toPlace" #toPlace="ngModel" [(ngModel)]="service.formData.toPlace" placeholder="To">
+        </div>
+    </div>
+    <button type="submit" [disabled]="form.invalid" class="submitBtn">Submit</button>
+</form>

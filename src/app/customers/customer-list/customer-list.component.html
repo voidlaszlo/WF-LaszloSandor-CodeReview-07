@@ -1,0 +1,18 @@
+<h1 id="customers-text">Customers</h1>
+
+<table>
+    <thead>
+        <th>Name</th>
+        <th>From</th>
+        <th>To</th>
+        <th></th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let cust of list">
+            <td (click)="onEdit(cust)">{{cust.fullName}}</td>
+            <td (click)="onEdit(cust)">{{cust.fromPlace}}</td>
+            <td (click)="onEdit(cust)">{{cust.toPlace}}</td>
+            <td><a (click)="onDelete(cust.id)" id="deletBtn">delete</a></td>
+        </tr>
+    </tbody>
+</table>
